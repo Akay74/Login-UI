@@ -94,6 +94,7 @@ input{
     border: none;
     color: #fff;
     margin-left: 9px;
+    overflow: hidden;
 }
 
 input:focus, textarea:focus, select:focus{
