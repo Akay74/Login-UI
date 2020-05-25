@@ -3,26 +3,32 @@
 }
 
 body{
-    background: #C9DBEF;
+    background-image: url(images/river.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: "Muli", sans-serif;
+    height: auto;
 }
 
 .wrapper{
-    max-width: 100%;
+    margin: 10% auto;
+    max-width: 80%;
+    height: auto;
     border: 3px solid #fff;
     border-radius: 9px;
 }
 
 .blank{
-    background-image: url('images/river.jpg');
+    display: none;
+    /*(background-image: url('images/river.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 40px;
     border-radius: 9px 9px 0 0;
-    height: 100vh;
+    height: 100vh;*/
 }
 
-.blank a {
+/*.blank a {
     text-decoration: none;
     color: #fff;
     padding-right: 12px;
@@ -35,15 +41,19 @@ body{
     width: 24px;
     height: auto;
     float: right;
-}
+}*/
 
 .login-content{
+    /*margin: 5% auto;*/
     background: #042A4F;
+    opacity: 0.9;
     width: 100%;
-    padding: 2rem 3.5rem 5rem;
-    border-radius: 0 0 9px 9px;
+    padding: 2rem 2rem 5rem;
+    border-radius: 9px;
     color: #fff;
+    height: auto;
 }
+
 
 .header{
     display: flex;
@@ -59,9 +69,9 @@ body{
 
 .user{
     width:  100%;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     border-radius: 9px;
-    background: transparent;
+    background: #042A4F;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -70,9 +80,9 @@ body{
 
 .psswrd{
     width:  100%;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     border-radius: 9px;
-    background: transparent;
+    background: #042A4F;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -99,14 +109,35 @@ input:focus, textarea:focus, select:focus{
 .checkbox{
     display: flex;
     justify-content: space-between;
-    font-size: 13px;
+    font-size: 11px;
     align-items: center;
 }
 
 #checkbox{
     background: transparent;
     border: 1px solid #fff;
-    border-radius: 2px;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    box-shadow: 0px 0px 0px 1px #fff inset;
+    height: 15px;
+    width: 15px;
+    position: relative;
+    margin: 0px 5px 0 0;
+    vertical-align: -2px;
+}
+
+#checkbox::after{
+    content: '\2713\0020';
+    position: absolute;
+    top: .35rem;
+    left: .22rem;
+    font-size: .75rem;
+    line-height: 0.8;
+    color: transparent;
+}
+
+#checkbox:checked::after{
+    color:#fff;
 }
 
 .checkbox a{
@@ -142,6 +173,182 @@ button:hover{
     color: #fff;
 }
 
+
+@media (min-width: 481px){
+    *{
+        box-sizing: border-box;
+    }
+    
+    body{
+        background-image: url(images/river.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: "Muli", sans-serif;
+    }
+    
+    .wrapper{
+        margin: 5% auto;
+        max-width: 70%;
+        height: auto;
+        border: 3px solid #fff;
+        border-radius: 9px;
+    }
+    
+    .blank{
+        display: none;
+        background-image: url('images/river.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 40px;
+        border-radius: 9px 9px 0 0;
+        height: 100vh;
+    }
+    
+    .blank a {
+        text-decoration: none;
+        color: #fff;
+        padding-right: 12px;
+        float: left;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    
+    .blank img{
+        width: 24px;
+        height: auto;
+        float: right;
+    }
+    
+    .login-content{
+        /*margin: 5% auto;*/
+        background: #042A4F;
+        opacity: 0.9;
+        width: 100%;
+        padding: 2rem 3.5rem 5rem;
+        border-radius: 9px;
+        color: #fff;
+        height: auto;
+    }
+    
+    
+    .header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+    
+    .header img{
+        width: 25px;
+        height: auto;
+        margin-right: 5px;
+    }
+    
+    .user{
+        width:  100%;
+        border: 2px solid #fff;
+        border-radius: 9px;
+        background: #042A4F;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        margin: 1.8rem 0;
+    }
+    
+    .psswrd{
+        width:  100%;
+        border: 2px solid #fff;
+        border-radius: 9px;
+        background: #042A4F;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        margin: 1.8rem 0;
+    }
+    
+    input{
+        background: transparent;
+        border: none;
+        color: #fff;
+        margin-left: 9px;
+    }
+    
+    input:focus, textarea:focus, select:focus{
+        outline: none;
+        background: none;
+    }
+    
+    .input-box img{
+        width: 24px;
+        height: auto;
+    }
+    
+    .checkbox{
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        align-items: center;
+    }
+    
+    #checkbox{
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        -webkit-appearance: none;
+        box-shadow: 0px 0px 0px 1px #fff inset;
+        height: 15px;
+        width: 15px;
+        position: relative;
+        margin: 0px 12px 0 0;
+        vertical-align: -2px;
+    }
+    
+    #checkbox::after{
+        content: '\2713\0020';
+        position: absolute;
+        top: .35rem;
+        left: .22rem;
+        font-size: .75rem;
+        line-height: 0.8;
+        color: transparent;
+    }
+    
+    #checkbox:checked::after{
+        color:#fff;
+    }
+    
+    .checkbox a{
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    button{
+        width: 100%;
+        border-radius: 9px;
+        text-align: center;
+        background: #F8D67F;
+        color: #042A4F;
+        font-weight: 600;
+        padding: 15px;
+        border: none;
+        margin: 1.8rem 0;
+    }
+    
+    button:focus {
+        outline: none;
+    }
+    
+    button:hover{
+        background: rgb(255, 226, 154);
+    }
+    
+    .sign-up{
+        font-size: 12px;
+    }
+    
+    .sign-up a{
+        color: #fff;
+    }
+}
 
 
 
